@@ -30,4 +30,4 @@ docker-compose up -d
 ```
 * Now you should be able to see the performance test metrics in realtime on "Perfiz Performance Metric Monitor" Grafana Dashboard
 
-![Grafana Screenshot](https://github.com/znsio/perfiz-demo/tree/main/assets/grafana-test.png)
+![Grafana Screenshot](https://github.com/znsio/perfiz-demo/blob/main/assets/grafana-test.png)
