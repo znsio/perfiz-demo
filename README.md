@@ -15,7 +15,7 @@ $ curl http://localhost:9999/pets/1
     "petid": 444
 }
 ```
-* Download the latest [release zip file](https://github.com/znsio/perfiz/releases) and ```cd``` into it
+* Download the latest [Perfiz release zip file](https://github.com/znsio/perfiz/releases) and ```cd``` into it
 * Run below command to start Perfiz
 ```shell script
 docker-compose up -d
@@ -24,7 +24,7 @@ docker-compose up -d
   * UserName - admin
   * Password - admin
 * Navigate to "Perfiz Performance Metric Monitor" Dashboard
-* You are all set to run Performance tests on the perfiz-demo app
+* You are all set to run Performance tests on the perfiz-demo app. Below command runs a quick 45 second load test.
 ```shell script
 ./perfiz.sh <path to perfiz-demo repo>/karate-features <path to perfiz-demo repo>/perfiz.yml
 ```
