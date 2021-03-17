@@ -15,20 +15,28 @@ $ curl http://localhost:9999/pets/1
     "petid": 444
 }
 ```
-* Download the latest [Perfiz release zip file](https://github.com/znsio/perfiz/releases) and ```cd``` into it
-* Run below command to start Perfiz
+* Download the latest [Perfiz release zip file](https://github.com/znsio/perfiz/releases) and unzip it to a location of your choice
+* Set ```PERFIZ_HOME``` environment variable and add it to your ```PATH```.
 ```shell script
-docker-compose up -d
+export PERFIZ_HOME=<path to perfiz dir>
+```
+* You are all set to run Performance tests on the perfiz-demo app. Below command runs a quick 45 second load test.
+```shell script
+$PERFIZ_HOME/perfiz.sh start
 ```
 * Launch Grafana on your browser on localhost:3000. It may ask you to change the password.
   * UserName - admin
   * Password - admin
 * Navigate to "Perfiz Performance Metric Monitor" Dashboard
-* You are all set to run Performance tests on the perfiz-demo app. Below command runs a quick 45 second load test.
-```shell script
-./perfiz.sh <path to perfiz-demo repo>/karate-features <path to perfiz-demo repo>/perfiz.yml
-```
 * Now you should be able to see the performance test metrics in realtime on "Perfiz Performance Metric Monitor" Grafana Dashboard
+* To stop Perfiz run below command
+```shell script
+$PERFIZ_HOME/perfiz.sh stop
+```
+* To stop demo app run below command
+```shell script
+docker-compose down
+```
 
 ![Grafana Screenshot](https://github.com/znsio/perfiz-demo/blob/main/assets/grafana-test.png)
 
