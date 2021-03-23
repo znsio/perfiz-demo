@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
 RUN mkdir /petstore
-COPY service.qontract /petstore/service.qontract
-ADD https://github.com/znsio/specmatic/releases/download/0.23.1/qontract.jar /petstore
-ENTRYPOINT ["java", "-jar", "/petstore/qontract.jar", "stub", "/petstore/service.qontract", "--port", "9999"]
+COPY service.spec /petstore/service.spec
+ADD https://github.com/znsio/specmatic/releases/download/0.24.1/specmatic.jar /petstore
+ENTRYPOINT ["java", "-jar", "/petstore/specmatic.jar", "stub", "/petstore/service.spec", "--port", "9999"]
