@@ -1,5 +1,6 @@
+karateFeaturesDir: "karate-features"
 karateFeatures:
-  - karateFile: "karate-features/petstore.feature"
+  - karateFile: "petstore.feature"
     gatlingSimulationName: "AllGet"
     loadPattern:
       - patternType: "nothingFor"
