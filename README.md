@@ -47,6 +47,7 @@ An example REST API project to help you get started with [Perfiz](https://github
     * Now you should be able to see the performance test metrics in realtime on "Perfiz Performance Metric Monitor" Grafana Dashboard
     ![Grafana Screenshot](https://github.com/znsio/perfiz-demo/blob/main/assets/grafana-test.png)
     * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup.
+    * If you have another 5 minutes, read through the [explanation](https://github.com/znsio/perfiz-demo#explanation) on how this Demo is working. Then you can play around with the load pattern in perfiz.yml, re-run your Perf Test and observe your changes in Grafana.
 * Stopping Perfiz
     * To stop Perfiz run below command
     ```shell script
