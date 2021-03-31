@@ -52,7 +52,7 @@ An example REST API project to help you get started with [Perfiz](https://github
     * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup.
     * If you have another 5 minutes
         * Read through the [explanation](https://github.com/znsio/perfiz-demo#explanation) on how this Demo is working. Then you can play around with the load pattern in perfiz.yml, re-run your Perf Test and observe your changes in Grafana.
-        * Setting up Prometheus to scrape your application and server metrics
+        * [Adding prometheus scrape configs and Grafana Dashboards](https://github.com/znsio/perfiz-demo#prometheus-and-grafana-configuration)
 * Stopping Perfiz
     * To stop Perfiz run below command
     ```shell script
@@ -63,6 +63,18 @@ An example REST API project to help you get started with [Perfiz](https://github
     docker-compose down
     ```
   
+## Explanation
+
+* Demo App - PetStore REST API - ```./app``` and ```./docker-compose.yml```
+  * The REST API is a stub server that runs with the help of an interesting project called [specmatic](https://github.com/znsio/specmatic)
+  * I have Dockerised this into a simple docker-compose to get you going quickly
+* Karate Features - ```./karate-features```
+  * API Tests for the above project
+* Perfiz Configuration - ```./perfiz.yml```
+  * This file leverages the Karate API test as a load test script
+  * It also defines the Gatling simulation name and the load pattern
+  * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
+
 ## Prometheus and Grafana Configuration
 
 As an example we will see how to read JVM metrics and setup a Grafana Dashboard for the same.
@@ -82,15 +94,3 @@ However these steps are applicable to any Prometheus compatible metrics.
     * I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
     * Perfiz automatically loads this Dashboard to Grafana at startup
     * You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
-
-## Explanation
-
-* Demo App - PetStore REST API - ```./app``` and ```./docker-compose.yml```
-  * The REST API is a stub server that runs with the help of an interesting project called [specmatic](https://github.com/znsio/specmatic)
-  * I have Dockerised this into a simple docker-compose to get you going quickly
-* Karate Features - ```./karate-features```
-  * API Tests for the above project
-* Perfiz Configuration - ```./perfiz.yml```
-  * This file leverages the Karate API test as a load test script
-  * It also defines the Gatling simulation name and the load pattern
-  * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
