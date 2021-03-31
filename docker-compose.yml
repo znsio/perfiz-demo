@@ -6,3 +6,4 @@ services:
       context: './app'
     ports:
       - "9999:9999"
+      - "8089:8089"
