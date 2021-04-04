@@ -94,3 +94,27 @@ However these steps are applicable to any Prometheus compatible metrics.
   * This file leverages the Karate API test as a load test script
   * It also defines the Gatling simulation name and the load pattern
   * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
+  
+# Advanced
+
+We would like to support as many configurations as possible through yaml. Also we strongly believe that API tests should be leveraged as Perf Tests.
+However if there is a usecase that requires writing Scala Simulations, it is supported.
+
+## Running Scala Simulations
+
+If you only have Scala Simulations and no Karate files then all you need to add below line to your ```perfiz.yml```
+```yaml
+gatlingSimulationsDir: "src/test/scala"
+```
+
+Perfiz will add the Scala files in the above location to classpath and execute all Simulations.
+
+## Running Karate Gatling Simulations with Feeders
+
+You will need one more config in ```perfiz.yml``` in addition to the above section.
+```yaml
+gatlingSimulationsDir: "src/test/scala"
+karateFeaturesDir: "karate-features"
+```
+
+Now you can refer to your Karate Feature file in your simulation class as shown in this [Example](https://github.com/znsio/perfiz-demo/blob/scala_simulations_and_feeders/src/test/scala/org/znsio/perfiz/KarateSimulation.scala).
