@@ -38,18 +38,23 @@ An example REST API project to help you get started with [Perfiz](https://github
     export PERFIZ_HOME=<path to perfiz dir>
     ```
     * You are all set to run Performance tests
-* Running Performance Test on the PetStore REST API with Perfiz
-    * Make sure you are inside perfiz-demo Dir. Run below command to perform a quick 45 second load test.
+* Start you Performance Test Monitoring Stack on Docker
+    * Make sure you are inside perfiz-demo Dir. Run below command.
     ```shell script
     $PERFIZ_HOME/perfiz.sh start
     ```
     * Launch Grafana on your browser on localhost:3000. It may ask you to change the password. You can change it or ignore and proceed by re-entering the same username and password.
       * UserName - admin
       * Password - admin
-    * Navigate to ["Perfiz Performance Metric Monitor"](http://localhost:3000/d/4l-HfCPMk/perfiz-performance-metric-monitor) Dashboard
+* Running Performance Test on the PetStore REST API with Perfiz
+    * Make sure you are inside perfiz-demo Dir. Run below command to perform a quick 45 second load test.
+    ```shell script
+    $PERFIZ_HOME/perfiz.sh test
+    ```
+    * On Grafana Dashboard (localhost:3000) navigate to ["Perfiz Performance Metric Monitor"](http://localhost:3000/d/4l-HfCPMk/perfiz-performance-metric-monitor) Dashboard
     * Now you should be able to see the performance test metrics in realtime on "Perfiz Performance Metric Monitor" Grafana Dashboard
     ![Grafana Screenshot](https://github.com/znsio/perfiz-demo/blob/main/assets/grafana-test.png)
-    * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup.
+    * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup. To repeat the test you can run "$PERFIZ_HOME/perfiz.sh test" again.
     * If you have another 5 minutes
         * Read through the [explanation](https://github.com/znsio/perfiz-demo#explanation) on how this Demo is working. Then you can play around with the load pattern in perfiz.yml, re-run your Perf Test and observe your changes in Grafana.
         * [Adding prometheus scrape configs and Grafana Dashboards](https://github.com/znsio/perfiz-demo#prometheus-and-grafana-configuration)
