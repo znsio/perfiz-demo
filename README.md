@@ -46,6 +46,7 @@ An example REST API project to help you get started with [Perfiz](https://github
     * Launch Grafana on your browser on localhost:3000. It may ask you to change the password. You can change it or ignore and proceed by re-entering the same username and password.
       * UserName - admin
       * Password - admin
+    * On Docker Dashboard you will be able to observe all the containers running under the name "Perfiz"
 * Running Performance Test on the PetStore REST API with Perfiz
     * Make sure you are inside perfiz-demo Dir. Run below command to perform a quick 45 second load test.
     ```shell script
