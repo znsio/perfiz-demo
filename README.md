@@ -15,7 +15,7 @@ An example REST API project to help you get started with [Perfiz](https://github
 * Docker and docker-compose
    * docker > 19.03.0
    * docker-compose > 1.28.0
-* Your preferred Text Editor / IDE (to edit Perfice YAML Configuration)
+* Your preferred Text Editor / IDE (to edit Perfiz YAML Configuration)
 
 ## Instructions
 
