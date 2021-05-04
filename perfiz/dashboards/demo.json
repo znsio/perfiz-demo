@@ -60,7 +60,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.2",
+      "pluginVersion": "7.1.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -93,7 +93,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.all.count"
+                  "karatesimulation.allRequests.all.count"
                 ],
                 "type": "field"
               },
@@ -111,7 +111,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.ok.count"
+                  "karatesimulation.allRequests.ok.count"
                 ],
                 "type": "field"
               },
@@ -129,7 +129,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.ko.count"
+                  "karatesimulation.allRequests.ko.count"
                 ],
                 "type": "field"
               },
@@ -227,7 +227,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.2",
+      "pluginVersion": "7.1.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -260,7 +260,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.all.percentiles99"
+                  "karatesimulation.allRequests.all.percentiles99"
                 ],
                 "type": "field"
               },
@@ -278,7 +278,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.ok.percentiles95"
+                  "karatesimulation.allRequests.all.percentiles95"
                 ],
                 "type": "field"
               },
@@ -296,7 +296,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.ok.percentiles75"
+                  "karatesimulation.allRequests.all.percentiles75"
                 ],
                 "type": "field"
               },
@@ -314,7 +314,7 @@
             [
               {
                 "params": [
-                  "perfizsimulation.allRequests.ok.percentiles50"
+                  "karatesimulation.allRequests.all.percentiles50"
                 ],
                 "type": "field"
               },
@@ -412,7 +412,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.2",
+      "pluginVersion": "7.1.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -507,7 +507,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.2",
+      "pluginVersion": "7.1.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -574,19 +574,31 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 27,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-30m",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
   "timezone": "",
   "title": "Demo Dashboard",
   "uid": "4l-HfCPMi",
-  "version": 15
+  "version": 8
 }
