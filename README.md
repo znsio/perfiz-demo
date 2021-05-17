@@ -103,7 +103,7 @@ However these steps are applicable to any Prometheus compatible metrics.
 
 ## Setting "karate.env"
 
-* In our sample karate-config.js located in karate-features folder we have a default env "dev" and other env such as "stage" and "e2e"
+* In our sample [karate-config.js](https://github.com/znsio/perfiz-demo/blob/main/karate-features/karate-config.js) located in karate-features folder we have a default env "dev" and other env such as "stage" and "e2e"
 * To set the environment to a "stage" all you need to do is set "karateEnv" in perfiz config as shown in perfiz-staging-load-test.yml
 * We can run perfiz with this configuration by passing the specific config file 
 ```shell script
