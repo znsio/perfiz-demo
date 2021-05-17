@@ -100,19 +100,16 @@ However these steps are applicable to any Prometheus compatible metrics.
     * I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
     * Perfiz automatically loads this Dashboard to Grafana at startup
     * You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
+    
+## Setting "karate.env"
 
-## Explanation
+* In our sample [karate-config.js](https://github.com/znsio/perfiz-demo/blob/main/karate-features/karate-config.js) located in karate-features folder we have a default env "dev" and other env such as "stage" and "e2e"
+* To set the environment to a "stage" all you need to do is set "karateEnv" in perfiz config as shown in perfiz-staging-load-test.yml
+* We can run perfiz with this configuration by passing the specific config file 
+```shell script
+    $PERFIZ_HOME/perfiz.sh test perfiz-staging-load-test.yml
+```
 
-* Demo App - PetStore REST API - ```./app``` and ```./docker-compose.yml```
-  * The REST API is a stub server that runs with the help of an interesting project called [specmatic](https://github.com/znsio/specmatic)
-  * I have Dockerised this into a simple docker-compose to get you going quickly
-* Karate Features - ```./karate-features```
-  * API Tests for the above project
-* Perfiz Configuration - ```./perfiz.yml```
-  * This file leverages the Karate API test as a load test script
-  * It also defines the Gatling simulation name and the load pattern
-  * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
-  
 # Advanced
 
 We would like to support as many configurations as possible through yaml. Also we strongly believe that API tests should be leveraged as Perf Tests.
