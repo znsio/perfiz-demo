@@ -100,3 +100,12 @@ However these steps are applicable to any Prometheus compatible metrics.
     * I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
     * Perfiz automatically loads this Dashboard to Grafana at startup
     * You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
+
+## Setting "karate.env"
+
+* In our sample karate-config.js located in karate-features folder we have a default env "dev" and other env such as "stage" and "e2e"
+* To set the environment to a "stage" all you need to do is set "karateEnv" in perfiz config as shown in perfiz-staging-load-test.yml
+* We can run perfiz with this configuration by passing the specific config file 
+```shell script
+    $PERFIZ_HOME/perfiz.sh test perfiz-staging-load-test.yml
+```
