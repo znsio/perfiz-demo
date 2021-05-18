@@ -64,7 +64,7 @@ An example REST API project to help you get started with [Perfiz](https://github
     ```shell script
     $PERFIZ_HOME/perfiz.sh stop
     ```
-    * To stop demo app run below command
+    * To stop PetStore REST API, run below command
     ```shell script
     docker-compose down
     ```
@@ -92,7 +92,7 @@ However these steps are applicable to any Prometheus compatible metrics.
 * **Prometheus Configuration**
     * Now we need to add the scrape configs for the above URL in ```prometheus.yml```
         * All custom Perfiz configurations are inside the [perfiz folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz)
-        * Inside this prometheus configurations are in side the [prometheus folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/prometheus)
+        * Inside this prometheus configurations are inside the [prometheus folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/prometheus)
         * The ```prometheus.yml``` file has job named ```java``` which reads the JVM metrics
     * Prometheus is part of the Perfiz stack. You will be able to access the ```jvm_*``` metrics on [Prometheus Expression Browser](http://localhost:9090/graph)
 * **Grafana JVM Dashboard**
