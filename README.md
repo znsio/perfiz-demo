@@ -85,7 +85,7 @@ An example REST API project to help you get started with [Perfiz](https://github
 ## Prometheus Configuration - Adding Scrape Configs
 
 As an example we will see how to read JVM metrics and setup a Grafana Dashboard for the same.
-However these steps are applicable to any Prometheus compatible metrics.
+However, these steps are applicable to any Prometheus compatible metrics.
 
 * **JMX Metrics for Petstore Application**
     * The example application running on [http://localhost:9999](http://localhost:9999/pets/1) is setup with [JMX Exporter](https://github.com/prometheus/jmx_exporter) and publishes metrics that can be read by Prometheus
@@ -96,15 +96,14 @@ However these steps are applicable to any Prometheus compatible metrics.
         * Inside this prometheus configurations are inside the [prometheus folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/prometheus)
         * The ```prometheus.yml``` file has job named ```java``` which reads the JVM metrics
     * Prometheus is part of the Perfiz stack. You will be able to access the ```jvm_*``` metrics on [Prometheus Expression Browser](http://localhost:9090/graph)
-* **Grafana JVM Dashboard**
-    * Let us now setup a dashboard to visualise the above JMX metrics
-    * I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
-    * Perfiz automatically loads this Dashboard to Grafana at startup
-    * You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
-    
+
 ## Grafana Dashboards - Adding JVM Dashboard
+Let us now setup a dashboard to visualise the above JMX metrics
     
-* [Official Community Built Dashboards](https://grafana.com/grafana/dashboards)
+* I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
+* Perfiz automatically loads this Dashboard to Grafana at startup
+* You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
+* To add other [Official Community Built Dashboards](https://grafana.com/grafana/dashboards)
     * Download and save JSON to ```<your project root dir>/perfiz/dashboards```
     * Perfiz will pick it up at startup and load it into Grafana
     * This way you will also be able to checkin these JSONs to your version control and share it with your team
