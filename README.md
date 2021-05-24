@@ -31,13 +31,7 @@ An example REST API project to help you get started with [Perfiz](https://github
         "petid": 444
     }
     ```
-* Setting up **Perfiz**
-    * Download the latest [Perfiz release zip file](https://github.com/znsio/perfiz/releases) and unzip it to a location of your choice
-    * Set ```PERFIZ_HOME``` environment variable and add it to your ```PATH```.
-    ```shell script
-    export PERFIZ_HOME=<path to perfiz dir>
-    ```
-    * You are all set to run Performance tests
+* Setting up **Perfiz** - Refer to [Installation](https://github.com/znsio/perfiz#installation-and-upgrades)
 * Start you Performance Test Monitoring Stack on Docker
     * Make sure you are inside perfiz-demo Dir. Run below command.
     ```shell script
