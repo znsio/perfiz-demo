@@ -35,13 +35,7 @@ An example REST API project and associated Karate API tests.
         "petid": 444
     }
     ```
-* Setting up **Perfiz**
-    * Download the latest [Perfiz release zip file](https://github.com/znsio/perfiz/releases) and unzip it to a location of your choice
-    * Set ```PERFIZ_HOME``` environment variable and add it to your ```PATH```.
-    ```shell script
-    export PERFIZ_HOME=<path to perfiz dir>
-    ```
-    * You are all set to run Performance tests
+* Setting up **Perfiz** - Refer to [installation](https://github.com/znsio/perfiz#installation-and-upgrades)
 * **Init** Perfiz
     * Make sure you are inside perfiz-demo Dir.
     * Create perfiz specific files inside your project by running the "init" command
