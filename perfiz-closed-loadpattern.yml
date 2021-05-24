@@ -1,0 +1,18 @@
+karateFeaturesDir: "karate-features"
+karateFeatures:
+  - karateFile: "petstore.feature"
+    gatlingSimulationName: "AllGet"
+    loadPattern:
+      - patternType: "rampConcurrentUsers"
+        userCount: "1"
+        targetUserCount: "3"
+        duration: "30 seconds"
+      - patternType: "constantConcurrentUsers"
+        userCount: "3"
+        duration: "30 seconds"
+      - patternType: "rampConcurrentUsers"
+        userCount: "3"
+        targetUserCount: "2"
+        duration: "30 seconds"
+    uriPatterns:
+      - "/pets/{id}"
