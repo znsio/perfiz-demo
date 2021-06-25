@@ -41,19 +41,20 @@ An example REST API project to help you get started with [Perfiz](https://github
       * UserName - admin
       * Password - admin
     * On Docker Dashboard you will be able to observe all the containers running under the name "Perfiz"
+* Run WSO2 and configure API endpoint
+    ```shell script
+    docker run -it -p 8280:8280 -p 8243:8243 -p 9443:9443 --name api-manager wso2/wso2am:4.0.0
+    ```
 * Running Performance Test on the PetStore REST API with Perfiz
     * Make sure you are inside perfiz-demo Dir. Run below command to perform a quick 45 second load test.
     ```shell script
-    $PERFIZ_HOME/perfiz.sh test
+    $PERFIZ_HOME/perfiz.sh test perfiz-without-wso2.yml
     ```
-    * On Grafana Dashboard (localhost:3000) navigate to ["Perfiz Performance Metric Monitor"](http://localhost:3000/d/4l-HfCPMk/perfiz-performance-metric-monitor) Dashboard
-    * Now you should be able to see the performance test metrics in realtime on "Perfiz Performance Metric Monitor" Grafana Dashboard
-    ![Grafana Screenshot](https://github.com/znsio/perfiz-demo/blob/main/assets/grafana-test.png)
-    * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup. To repeat the test you can run "$PERFIZ_HOME/perfiz.sh test" again.
-    * If you have another 5 minutes
-        * Read through the [explanation](https://github.com/znsio/perfiz-demo#explanation) on how this Demo is working. Then you can play around with the load pattern in perfiz.yml, re-run your Perf Test and observe your changes in Grafana.
-        * [Adding prometheus scrape configs and Grafana Dashboards](https://github.com/znsio/perfiz-demo#prometheus-and-grafana-configuration)
-        * Try the [practise-exercise](https://github.com/znsio/perfiz-demo/tree/practise-exercise) to integrated Perfiz into this demo project from scratch
+* Running Performance Test on the PetStore REST API with WSO2 and Perfiz
+    * Make sure you are inside perfiz-demo Dir. Run below command to perform a quick 45 second load test.
+    ```shell script
+    $PERFIZ_HOME/perfiz.sh test perfiz-with-wso2.yml
+    ```
 * Stopping Perfiz
     * To stop Perfiz run below command
     ```shell script
@@ -63,54 +64,3 @@ An example REST API project to help you get started with [Perfiz](https://github
     ```shell script
     docker-compose down
     ```
-  
-## Explanation
-
-* Demo App - PetStore REST API - ```./app``` and ```./docker-compose.yml```
-  * The REST API is a stub server that runs with the help of an interesting project called [specmatic](https://github.com/znsio/specmatic)
-  * I have Dockerised this into a simple docker-compose to get you going quickly
-* Karate Features - ```./karate-features```
-  * API Tests for the above project
-* Perfiz Configuration - ```./perfiz.yml```
-  * This file leverages the Karate API test as a load test script
-  * It also defines the Gatling simulation name and the load pattern
-  * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
-
-## Prometheus Configuration - Adding Scrape Configs
-
-As an example we will see how to read JVM metrics and setup a Grafana Dashboard for the same.
-However, these steps are applicable to any Prometheus compatible metrics.
-
-* **JMX Metrics for Petstore Application**
-    * The example application running on [http://localhost:9999](http://localhost:9999/pets/1) is setup with [JMX Exporter](https://github.com/prometheus/jmx_exporter) and publishes metrics that can be read by Prometheus
-    * These metrics are available on [http://localhost:8089/metrics](http://localhost:8089/metrics)
-* **Prometheus Configuration**
-    * Now we need to add the scrape configs for the above URL in ```prometheus.yml```
-        * All custom Perfiz configurations are inside the [perfiz folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz)
-        * Inside this prometheus configurations are inside the [prometheus folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/prometheus)
-        * The ```prometheus.yml``` file has job named ```java``` which reads the JVM metrics
-    * Prometheus is part of the Perfiz stack. You will be able to access the ```jvm_*``` metrics on [Prometheus Expression Browser](http://localhost:9090/graph)
-
-## Grafana Dashboards - Adding JVM Dashboard
-Let us now setup a dashboard to visualise the above JMX metrics
-    
-* I have downloaded the JSON for the popular [JVM dashboard](https://grafana.com/grafana/dashboards/8563) and have saved it inside [dashboards folder](https://github.com/znsio/perfiz-demo/tree/main/perfiz/dashboards)
-* Perfiz automatically loads this Dashboard to Grafana at startup
-* You can access this dashboard on [Grafana](http://localhost:3000/d/chanjarster-jvm-dashboard/jvm-dashboard)
-* To add other [Official Community Built Dashboards](https://grafana.com/grafana/dashboards)
-    * Download and save JSON to ```<your project root dir>/perfiz/dashboards```
-    * Perfiz will pick it up at startup and load it into Grafana
-    * This way you will also be able to checkin these JSONs to your version control and share it with your team
-    * Example: [JVM Dashboard](https://github.com/znsio/perfiz-demo/blob/main/perfiz/dashboards/jvm-dashboard_rev17.json)
-* Custom / Modified Dashboards
-    * We often have to customize dashboards as per our project context
-    * After making these changes save the [JSON Model](https://grafana.com/docs/grafana/latest/dashboards/json-model/) to ```<your project root dir>/perfiz/dashboards```
-
-## Setting "karate.env"
-
-* In our sample [karate-config.js](https://github.com/znsio/perfiz-demo/blob/main/karate-features/karate-config.js) located in karate-features folder we have a default env "dev" and other env such as "stage" and "e2e"
-* To set the environment to a "stage" all you need to do is set "karateEnv" in perfiz config as shown in perfiz-staging-load-test.yml
-* We can run perfiz with this configuration by passing the specific config file 
-```shell script
-    $PERFIZ_HOME/perfiz.sh test perfiz-staging-load-test.yml
-```
