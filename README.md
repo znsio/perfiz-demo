@@ -12,9 +12,7 @@ An example REST API project to help you get started with [Perfiz](https://github
 ## What you will need
 
 * About **5 minutes**
-* Docker and docker-compose
-   * docker > 19.03.0
-   * docker-compose > 1.28.0
+* Docker > 20.10.0
 * Your preferred Text Editor / IDE (to edit Perfiz YAML Configuration)
 
 ## Instructions
@@ -22,7 +20,7 @@ An example REST API project to help you get started with [Perfiz](https://github
 * Running the PetStore REST API
     * Clone this repo and run below command
     ```shell script
-    docker-compose up -d
+    docker compose up -d
     ```
     * This will start a REST API app. You can test this with Curl. This is a sample app against which we will run our performance tests.
     ```shell script
@@ -61,7 +59,7 @@ An example REST API project to help you get started with [Perfiz](https://github
     ```
     * To stop PetStore REST API, run below command
     ```shell script
-    docker-compose down
+    docker compose down
     ```
   
 ## Explanation
