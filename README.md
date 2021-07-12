@@ -29,7 +29,7 @@ An example REST API project to help you get started with [Perfiz](https://github
         "petid": 444
     }
     ```
-* Setting up **Perfiz** - Refer to [Installation](https://github.com/znsio/perfiz#installation-and-upgrades)
+* Setting up **Perfiz** - Refer to [Installation](https://perfiz.com/installation.html#installation)
 * Start you Performance Test Monitoring Stack on Docker
     * Make sure you are inside perfiz-demo Dir. Run below command.
     ```shell script
@@ -72,7 +72,7 @@ An example REST API project to help you get started with [Perfiz](https://github
 * Perfiz Configuration - ```./perfiz.yml```
   * This file leverages the Karate API test as a load test script
   * It also defines the Gatling simulation name and the load pattern
-  * Please [Perfiz](https://github.com/znsio/perfiz) Readme for detailed syntax documentation
+  * Please [Perfiz Config Syntax](https://perfiz.com/perfiz-config-syntax.html) for detailed syntax documentation
 
 ## Prometheus Configuration - Adding Scrape Configs
 
