@@ -1,4 +1,4 @@
-# [Perfiz](https://github.com/znsio/perfiz) Demo
+# [Perfiz](https://perfiz.com) Demo
 
 An example REST API project to help you get started with [Perfiz](https://github.com/znsio/perfiz)
 
