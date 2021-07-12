@@ -50,7 +50,8 @@ An example REST API project to help you get started with [Perfiz](https://perfiz
     * **Congratulations!** You have successfully run a Performance Test on your local machine with little to no setup. To repeat the test you can run "$PERFIZ_HOME/perfiz.sh test" again.
     * If you have another 5 minutes
         * Read through the [explanation](https://github.com/znsio/perfiz-demo#explanation) on how this Demo is working. Then you can play around with the load pattern in perfiz.yml, re-run your Perf Test and observe your changes in Grafana.
-        * [Adding prometheus scrape configs and Grafana Dashboards](https://github.com/znsio/perfiz-demo#prometheus-and-grafana-configuration)
+        * [Adding prometheus scrape configs](https://github.com/znsio/perfiz-demo#prometheus-configuration---adding-scrape-configs)
+        * [Adding Grafana Dashboards](https://github.com/znsio/perfiz-demo#prometheus-configuration---adding-scrape-configs)
         * Try the [practise-exercise](https://github.com/znsio/perfiz-demo/tree/practise-exercise) to integrated Perfiz into this demo project from scratch
 * Stopping Perfiz
     * To stop Perfiz run below command
