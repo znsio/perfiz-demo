@@ -1,4 +1,4 @@
-# [Perfiz](https://github.com/znsio/perfiz) Practise Exercise
+# [Perfiz](https://perfiz.com) Practise Exercise
 
 This [practise exercise git branch](https://github.com/znsio/perfiz-demo/tree/practise-exercise) of the [project](https://github.com/znsio/perfiz-demo) gives you an empty template where you try Perfiz from scratch. At the end of this exercise you will have achieved most of what is already setup in the main branch.
 
@@ -33,13 +33,8 @@ An example REST API project and associated Karate API tests.
         "petid": 444
     }
     ```
-* Setting up **Perfiz** - Refer to [installation](https://github.com/znsio/perfiz#installation-and-upgrades)
-* **Init** Perfiz
-    * Make sure you are inside perfiz-demo Dir.
-    * Create perfiz specific files inside your project by running the "init" command
-    ```shell script
-    $PERFIZ_HOME/perfiz.sh init
-    ```
+* Setting up **Perfiz** - Refer to [installation](https://perfiz.com/installation.html#installation)
+* **Init** Perfiz - Refer to [initializing your project](https://perfiz.com/installation.html#initializing-your-project-with-perfiz)
     * Observe the files that are added to your project to get you started
         * perfiz.yml
         * perfiz/
