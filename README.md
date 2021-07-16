@@ -16,7 +16,8 @@ An example REST API project and associated Karate API tests.
 ## What you will need
 
 * About **5 minutes**
-* Docker > 20.10.0
+* Docker >= 20.10.0
+* docker-compose >= 1.29.0
 * Your preferred Text Editor / IDE (to edit Perfiz YAML Configuration)
 
 ## Instructions
@@ -24,7 +25,7 @@ An example REST API project and associated Karate API tests.
 * Running the PetStore REST API
     * Clone this repo and run below command
     ```shell script
-    docker compose up -d
+    docker-compose up -d
     ```
     * This will start a REST API app. You can test this with Curl. This is a sample app against which we will run our performance tests.
     ```shell script
@@ -69,7 +70,7 @@ An example REST API project and associated Karate API tests.
   ```
 * To stop demo app run below command
   ```shell script
-  docker compose down
+  docker-compose down
   ```
   
 Refer to [main](https://github.com/znsio/perfiz-demo) branch for expanation.
