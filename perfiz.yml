@@ -1,7 +1,7 @@
 karateFeaturesDir: "karate-features"
-karateFeatures:
+gatlingScenarios:
   - karateFile: "petstore.feature"
-    gatlingSimulationName: "AllGet"
+    gatlingScenarioName: "AllGet"
     loadPattern:
       - patternType: "nothingFor"
         duration: "15 seconds"

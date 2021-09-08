@@ -1,8 +1,8 @@
 karateFeaturesDir: "karate-features"
 karateEnv: "stage" # Refer to karate-features/karate-config.js
-karateFeatures:
+gatlingScenarios:
   - karateFile: "petstore.feature"
-    gatlingSimulationName: "AllGet"
+    gatlingScenarioName: "AllGet"
     loadPattern:
       - patternType: "nothingFor"
         duration: "15 seconds"
