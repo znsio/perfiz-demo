@@ -116,8 +116,8 @@ Let us now setup a dashboard to visualise the above JMX metrics
 
 # Advanced
 
-We would like to support as many configurations as possible through yaml. Also we strongly believe that API tests should be leveraged as Perf Tests.
-However if there is a usecase that requires writing Scala Simulations, it is supported.
+We would like to support as many configurations as possible through yaml. Also, we strongly believe that API tests should be leveraged as Perf Tests.
+However, if there are usecases that require writing Scala Simulations, perfiz can also run scala simulations.
 
 ## Running Scala Simulations
 
@@ -127,7 +127,8 @@ gatlingSimulationsDir: "src/test/scala"
 gatlingSimulationClass: "<Fully Qualified Name of your Simulation Class>"
 ```
 
-Perfiz will add the Scala files in the above location to classpath and execute all Simulations.
+Perfiz will add the Scala files in the above location to classpath and execute specified simulation.
+Each perfiz yaml file can only be configured with one Simulation Class.
 
 ## Running Karate Gatling Simulations with Feeders
 
