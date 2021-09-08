@@ -1,7 +1,7 @@
 karateFeaturesDir: "karate-features"
-karateFeatures:
+gatlingScenarios:
   - karateFile: "petstore.feature"
-    gatlingSimulationName: "AllGet"
+    gatlingScenarioName: "AllGet"
     loadPattern:
       - patternType: "rampConcurrentUsers"
         userCount: "1"
