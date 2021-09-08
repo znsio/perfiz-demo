@@ -121,9 +121,10 @@ However if there is a usecase that requires writing Scala Simulations, it is sup
 
 ## Running Scala Simulations
 
-If you only have Scala Simulations and no Karate files then all you need to add below line to your ```perfiz.yml```
+If you only have Scala Simulations and no Karate files then all you need to add below lines to your ```perfiz.yml```
 ```yaml
 gatlingSimulationsDir: "src/test/scala"
+gatlingSimulationClass: "<Fully Qualified Name of your Simulation Class>"
 ```
 
 Perfiz will add the Scala files in the above location to classpath and execute all Simulations.
@@ -133,6 +134,7 @@ Perfiz will add the Scala files in the above location to classpath and execute a
 You will need one more config in ```perfiz.yml``` in addition to the above section.
 ```yaml
 gatlingSimulationsDir: "src/test/scala"
+gatlingSimulationClass: "<Fully Qualified Name of your Simulation Class>"
 karateFeaturesDir: "karate-features"
 ```
 
